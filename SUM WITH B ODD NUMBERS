@@ -1,0 +1,11 @@
+def solve(self, A, B):
+        count=0
+        arr=[0]*(len(A)+1)
+        odd=0
+        for i in range(len(A)):
+            arr[odd]+=1
+            if A[i] & 1:
+                odd+=1
+            if odd>=B:
+                count+=arr[odd-B]
+        return count
