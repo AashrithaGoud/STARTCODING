@@ -1,0 +1,10 @@
+def solve(self, A, B, C):
+        dic={}
+        res=[]
+        summ=list(set(A))+list(set(B))+list(set(C))
+        for i in summ:
+            dic[i]=dic.get(i,0)+1
+        for i in dic.keys():
+            if dic[i]>=2:
+                res.append(i)
+        return sorted(res)
