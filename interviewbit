@@ -1,0 +1,9 @@
+def solve(self, A):
+        dic={}
+        for i in A:
+            dic[i]=dic.get(i,0)+1
+        for i in A:
+            if dic[i]>1:
+                return i
+        else:
+            return -1
