@@ -1,0 +1,8 @@
+def solve(self, A, B):
+        count=0
+        sett=set()
+        for i in range(0,len(A)):
+            if A[i]^B in sett:
+                count+=1
+            sett.add(A[i])
+        return count
